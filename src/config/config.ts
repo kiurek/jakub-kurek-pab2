@@ -14,7 +14,7 @@ export const config = {
   mongo: {
     url: MONGO_URL,
   },
-  sever: {
+  server: {
     port: SERVER_PORT,
   },
 };
