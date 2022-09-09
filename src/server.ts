@@ -3,6 +3,13 @@ import http from "http";
 import mongoose from "mongoose";
 import { config } from "./config/config";
 import Logging from "./library/Logging";
+import dishRoutes from "./routes/dish.routes";
+import pracownikRoutes from "./routes/pracownik.routes";
+import produktRoutes from "./routes/produkt.routes";
+import restauracjaRoutes from "./routes/restauracja.routes";
+import rezerwacjaRoutes from "./routes/rezerwacja.routes";
+import stolikRoutes from "./routes/stolik.routes";
+import zamowienieRoutes from "./routes/zamowienie.routes";
 
 const router = express();
 
