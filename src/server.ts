@@ -3,7 +3,7 @@ import http from "http";
 import mongoose from "mongoose";
 import { config } from "./config/config";
 import Logging from "./library/Logging";
-import dishRoutes from "./routes/dish.routes";
+import dishRoutes, { route } from "./routes/dish.routes";
 import pracownikRoutes from "./routes/pracownik.routes";
 import produktRoutes from "./routes/produkt.routes";
 import restauracjaRoutes from "./routes/restauracja.routes";
@@ -67,6 +67,13 @@ const StartSever = () => {
   });
 
   // Routes
+  router.use("/dishes", dishRoutes);
+  router.use("/pracownicy", pracownikRoutes);
+  router.use("/produkty", produktRoutes);
+  router.use("/restauracja", restauracjaRoutes);
+  router.use("/rezerwacje", rezerwacjaRoutes);
+  router.use("/stoliki", stolikRoutes);
+  router.use("/zamowienia", zamowienieRoutes);
 
   // Healtcheck
   router.get("/ping", (req, res, next) =>
