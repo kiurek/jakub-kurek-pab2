@@ -10,7 +10,7 @@ export interface IStolikModel extends IStolik, Document {}
 const StolikSchema: Schema = new Schema(
   {
     nazwa: { type: Number, required: true },
-    iloscOsob: { type: Number, required: false },
+    pojemnosc: { type: Number, required: false },
     status: { type: String, enum: ["Wolny", "Zajęty"], default: "Wolny" },
   },
   {

@@ -12,7 +12,7 @@ const ProduktSchema: Schema = new Schema(
   {
     nazwa: { type: String, required: true },
     cena: { type: Number, required: true },
-    jednostka: { type: String, enum: ["kg", "g", "szt"], default: "kg" },
+    jednostka: { type: String, enum: ["kg", "but", "szt"], default: "kg" },
     ilosc: { type: Number, required: true },
   },
   {
